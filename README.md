@@ -126,6 +126,8 @@ Only admin users should be able to create new users. So let's introduce a **ROLE
         }
     }
     ```
+    
+    - if the role returned from `checkCredentials(...)` was not empty, then the user details did match those in the database, and should store the username and role in the session
 
 - it will be very useful to have a method that gives us the role from the session, so we'll add such a method to our `LoginController`:
 
